@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import {Iso } from "../components/Iso";
 import {art_data} from "../components/Iso";
 import {country_data} from "../components/Iso";
 import { useNavigate } from "react-router-dom";
@@ -94,7 +93,7 @@ export function CountryPage() {
         </div>
         <div style={{paddingBottom: "10%"}}>
           {transformed_art[country["cca2"]]?.map(item => {
-          return <div><img src={item["Link"]}></img><div style={{fontStyle: "italic"}}>{item["Title"]}</div><div>{item["Artist"]}</div><div><span style={{fontWeight: "bold"}}>{item["Museum name"]}</span> in {item["City"]}, {item["Country"]}</div></div>;
+          return <div><img alt="" src={item["Link"]}></img><div style={{fontStyle: "italic"}}>{item["Title"]}</div><div>{item["Artist"]}</div><div><span style={{fontWeight: "bold"}}>{item["Museum name"]}</span> in {item["City"]}, {item["Country"]}</div></div>;
         })}
         </div>
       </div>
